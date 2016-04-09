@@ -1,43 +1,23 @@
 <div class="container">
-
-    <!--&lt;!&ndash; Static navbar &ndash;&gt;-->
-    <!--<nav class="navbar navbar-default row">-->
-    <!--<div class="container-fluid">-->
-    <!--<div class="navbar-header">-->
-    <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"-->
-    <!--aria-expanded="false" aria-controls="navbar">-->
-    <!--<span class="sr-only">Toggle navigation</span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--<span class="icon-bar"></span>-->
-    <!--</button>-->
-    <!--<a class="navbar-brand" href="#">Atum</a>-->
-    <!--</div>-->
-    <!--<div id="navbar" class="navbar-collapse collapse">-->
-    <!--<ul class="nav navbar-nav">-->
-    <!--<li class="active"><a href="#">Home</a></li>-->
-    <!--</ul>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</nav>-->
-
     <div class="row">
         <div class="col-md-3 well">
             <div class="logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Atum.svg" width="100">
+              {{#link-to 'pv-sites'}}
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Atum.svg" width="100">
+              {{/link-to}}
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Photovoltaik 1</h3>
                 </div>
                 <div class="panel-body">
-                    <a href="#photo1">
-                        <ul class="list-group">
-                            <li class="list-group-item">Bern</li>
-                            <li class="list-group-item">Orientation: 20</li>
-                            <li class="list-group-item">Max: 200kWh</li>
-                        </ul>
-                    </a>
+                  {{#link-to 'pv-site' '1'}}
+                      <ul class="list-group">
+                          <li class="list-group-item">Bern</li>
+                          <li class="list-group-item">Orientation: 20</li>
+                          <li class="list-group-item">Max: 200kWh</li>
+                      </ul>
+                  {{/link-to}}
                 </div>
             </div>
             <div class="panel panel-default">
@@ -45,116 +25,28 @@
                     <h3 class="panel-title">Photovoltaik 2</h3>
                 </div>
                 <div class="panel-body">
-                    <a href="#photo2">
-                        <ul class="list-group">
-                            <li class="list-group-item">Bern</li>
-                            <li class="list-group-item">Orientation: 20</li>
-                            <li class="list-group-item">Max: 200kWh</li>
-                        </ul>
-                    </a>
+                  {{#link-to 'pv-site' '2'}}
+                      <ul class="list-group">
+                          <li class="list-group-item">Bern</li>
+                          <li class="list-group-item">Orientation: 20</li>
+                          <li class="list-group-item">Max: 200kWh</li>
+                      </ul>
+                  {{/link-to}}
                 </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <a href="#new">
-                        <div class="large-button-container">
-                            <div class="glyphicon glyphicon-plus"></div>
-                            <div class="text">Add new</div>
-                        </div>
-                    </a>
+                  {{#link-to "add-pv-site"}}
+                      <div class="large-button-container">
+                          <div class="glyphicon glyphicon-plus"></div>
+                          <div class="text">Add new</div>
+                      </div>
+                  {{/link-to}}
                 </div>
             </div>
         </div>
         <div class="col-md-9 well main-content">
-            <table class="preview-table">
-                <thead>
-                <tr class="day-names">
-                    <th>&nbsp;</th>
-                    <th>Mo</th>
-                    <th>Di</th>
-                    <th>Mi</th>
-                    <th>Do</th>
-                    <th>Fr</th>
-                    <th>Sa</th>
-                    <th>So</th>
-                </tr>
-                <tr class="day-dates">
-                    <th>&nbsp;</th>
-                    <th>(01.01)</th>
-                    <th>(02.01)</th>
-                    <th>(03.01)</th>
-                    <th>(04.01)</th>
-                    <th>(05.01)</th>
-                    <th>(06.01)</th>
-                    <th>(07.01)</th>
-                </tr>
-                <tr class="percentage">
-                    <th>&nbsp;</th>
-                    <td>
-                        <div class="percentage-empty-30"></div>
-                        <div class="percentage-full-70"></div>
-                    </td>
-                    <td>
-                        <div class="percentage-empty-20"></div>
-                        <div class="percentage-full-80"></div>
-                    </td>
-                    <td>
-                        <div class="percentage-empty-60"></div>
-                        <div class="percentage-full-40"></div>
-                    </td>
-                    <td>
-                        <div class="percentage-empty-70"></div>
-                        <div class="percentage-full-30"></div>
-                    </td>
-                    <td>
-                        <div class="percentage-empty-10"></div>
-                        <div class="percentage-full-90"></div>
-                    </td>
-                    <td>
-                        <div class="percentage-empty-90"></div>
-                        <div class="percentage-full-10"></div>
-                    </td>
-                    <td>
-                        <div class="percentage-empty-50"></div>
-                        <div class="percentage-full-50"></div>
-                    </td>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="total">
-                    <th>Total <br/><span class="small">in kWh</span></th>
-                    <th>156</th>
-                    <th>5</th>
-                    <th>20</th>
-                    <th>200</th>
-                    <th>23</th>
-                    <th>55</th>
-                    <th>66</th>
-                </tr>
-                <tr>
-                    <td>00:00</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>01:00</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                </tbody>
-            </table>
+          {{outlet}}
         </div>
     </div>
 </div>
-
-{{outlet}}
